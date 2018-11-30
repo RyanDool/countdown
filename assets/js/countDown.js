@@ -15,14 +15,6 @@ function Countdown(opt){
 			},
 			endCallback: null,
 			outputFormat: 'year|week|day|hour|minute|second',
-			outputTranslation: {
-				year: 'Roky',
-				week: 'Týdny',
-				day: 'Dny',
-				hour: 'Hodin',
-				minute: 'Minut',
-				second: 'Vteřin'
-			}
 		};
 	var lastTick = null,
 		intervalsBySize = ['year', 'week', 'day', 'hour', 'minute', 'second'],
@@ -152,7 +144,7 @@ function Countdown(opt){
 		for(intervalName in data){
 			if(data.hasOwnProperty(intervalName)){
 				var element = '<div class="' + elementClassPrefix + '_interval_basic_cont">\n<div class="' + getIntervalContCommonClassName() + ' ' + getIntervalContClassName(intervalName) + '">';
-				var intervalDescription = '<div class="' + elementClassPrefix + 'interval_basic_cont_description">\n' + options.outputTranslation[intervalName] + '\n</div>';
+				var intervalDescription = '<div class="' + elementClassPrefix + 'interval_basic_cont_description">\n' + '\n</div>';
 				data[intervalName].forEach(function (digit, index){
 					element += '<div class="' + getDigitContCommonClassName() + ' ' + getDigitContClassName(index) + '">\n' + getDigitElementString(digit, 0) + '\n</div>';
 				});
