@@ -1,0 +1,62 @@
+<html lang="en-US" class="external-links ua-brand-icons">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes">
+		<meta name="MobileOptimized" content="width">
+		<meta name="HandheldFriendly" content="true">
+		<title>Countdown Clock</title>
+		<meta name="description" content="Countdown Clock">
+		<script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="/assets/css/styles.css">
+	</head>
+	<body>
+		<div id="countdown">
+			<div id="countdown_container">
+				<div id="clockdiv">
+					<div>
+						<span class="days"></span>
+						<div class="smalltext">DAYS</div>
+					</div>
+					<div>
+						<span class="hours"></span>
+						<div class="smalltext">HOURS</div>
+					</div>
+					<div>
+						<span class="minutes"></span>
+						<div class="smalltext">MINUTES</div>
+					</div>
+					<div>
+						<span class="seconds"></span>
+						<div class="smalltext smalltext_seconds">SECONDS</div>
+					</div>
+				</div>					
+			</div>
+		</div>
+		<script src="/assets/js/countDown.min.js"></script>
+		<script type="text/javascript">
+			if(document.getElementById('countdown') != null){
+				var cd = new Countdown({
+					cont: document.getElementById('clockdiv'),
+					endDate: {
+						year: 2019,
+						month: 04,
+						day: 13,
+						hour: 9,
+						minute: 0,
+						second: 0
+					},
+					outputTranslation: {
+						day: 'Days',
+						hour: 'Hours',
+						minute: 'Minutes',
+						second: 'Seconds',
+					},
+					endCallback: null,
+					outputFormat: 'day|hour|minute|second',
+				});
+				cd.start();
+			}
+		</script>
+	</body>
+	</html>
